@@ -1,59 +1,29 @@
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-Apr 02, 2018 4:05:42 PM java.util.prefs.WindowsPreferences <init>
+Apr 02, 2018 8:59:45 PM java.util.prefs.WindowsPreferences <init>
 WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-Apr 02, 2018 4:05:42 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Apr 02, 2018 8:59:45 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\dougg\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Android\Udacity\ND\Gradle\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-Apr 02, 2018 4:05:42 PM com.google.apphosting.utils.jetty.JettyLogger info
+Apr 02, 2018 8:59:45 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
-Apr 02, 2018 1:05:42 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+Apr 02, 2018 5:59:46 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (C:\Android\Udacity\ND\Gradle\FinalProject\backend) is not equal to your 
 web application root (C:\Android\Udacity\ND\Gradle\FinalProject\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-Apr 02, 2018 1:05:43 PM com.google.apphosting.utils.jetty.JettyLogger info
+Apr 02, 2018 5:59:46 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: jetty-6.1.x
-Apr 02, 2018 1:05:44 PM com.google.apphosting.utils.jetty.JettyLogger info
+Apr 02, 2018 5:59:47 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Started SelectChannelConnector@localhost:8080
-Apr 02, 2018 1:05:44 PM com.google.appengine.tools.development.AbstractModule startup
+Apr 02, 2018 5:59:47 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Apr 02, 2018 1:05:44 PM com.google.appengine.tools.development.AbstractModule startup
+Apr 02, 2018 5:59:47 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Apr 02, 2018 4:05:44 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Apr 02, 2018 8:59:47 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-Apr 02, 2018 4:05:49 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeByteBufferOperations
+Apr 02, 2018 8:59:52 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeByteBufferOperations
 WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
-Apr 02, 2018 4:05:49 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeArrayOperations
+Apr 02, 2018 8:59:52 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeArrayOperations
 WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
-Apr 02, 2018 4:05:50 PM com.google.appengine.tools.development.LocalResourceFileServlet doGet
+Apr 02, 2018 8:59:53 PM com.google.appengine.tools.development.LocalResourceFileServlet doGet
 WARNING: No file found for: /favicon.ico
-Apr 02, 2018 4:11:17 PM com.google.appengine.api.datastore.dev.LocalDatastoreService init
-INFO: Local Datastore initialized: 
-	Type: High Replication
-	Storage: C:\Android\Udacity\ND\Gradle\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin
-Apr 02, 2018 4:11:17 PM com.google.appengine.api.datastore.dev.LocalDatastoreService load
-INFO: The backing store, C:\Android\Udacity\ND\Gradle\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin, does not exist. It will be created.
-Apr 02, 2018 4:11:30 PM com.google.appengine.api.taskqueue.dev.LocalTaskQueue init
-INFO: LocalTaskQueue is initialized
-Apr 02, 2018 4:11:30 PM org.quartz.simpl.SimpleThreadPool initialize
-INFO: Job execution threads will use class loader of thread: 1858609436@qtp-2015781843-0
-Apr 02, 2018 4:11:30 PM org.quartz.core.QuartzScheduler <init>
-INFO: Quartz Scheduler v.UNKNOWN.UNKNOWN.UNKNOWN created.
-Apr 02, 2018 4:11:30 PM org.quartz.simpl.RAMJobStore initialize
-INFO: RAMJobStore initialized.
-Apr 02, 2018 4:11:30 PM org.quartz.impl.StdSchedulerFactory instantiate
-INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-Apr 02, 2018 4:11:30 PM org.quartz.impl.StdSchedulerFactory instantiate
-INFO: Quartz scheduler version: UNKNOWN.UNKNOWN.UNKNOWN
-Apr 02, 2018 4:11:30 PM org.quartz.core.QuartzScheduler start
-INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-Apr 02, 2018 4:11:30 PM com.google.appengine.api.taskqueue.dev.LocalTaskQueue start_
-INFO: Local task queue initialized with base url http://localhost:8080
-Apr 02, 2018 4:11:39 PM com.google.appengine.api.search.dev.LocalSearchService <init>
-INFO: Local search service created
-Apr 02, 2018 4:11:39 PM com.google.appengine.api.search.dev.LuceneDirectoryMap$FileBased <init>
-SEVERE: File base storage: root directory doesn't exist
-Apr 02, 2018 4:11:39 PM com.google.appengine.api.search.dev.LocalSearchService init
-INFO: search initialized
-Apr 02, 2018 4:11:39 PM com.google.appengine.api.search.dev.LocalSearchService start
-INFO: search started
