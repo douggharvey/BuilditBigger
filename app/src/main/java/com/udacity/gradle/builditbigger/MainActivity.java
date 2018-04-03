@@ -1,13 +1,15 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
+import com.douglasharvey.jokedisplay.JokeDisplayActivity;
 
+@SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -36,20 +39,12 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         TellJokeAsyncTask tellJokeAsyncTask = new TellJokeAsyncTask();
         tellJokeAsyncTask.setOnResultsListener(new TellJokeAsyncInterface() {
-            public void onResultsSucceeded(String result) {
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+            public void onResultsSucceeded(String joke) {
+                Intent intent = new Intent(MainActivity.this, JokeDisplayActivity.class);
+                intent.putExtra(getString(com.douglasharvey.jokedisplay.R.string.EXTRA_JOKE), joke);
+                startActivity(intent);
             }
         });
         tellJokeAsyncTask.execute();
-
-
-   /*     JokeTeller jokeTeller = new JokeTeller();
-        Intent intent = new Intent(MainActivity.this, JokeDisplayActivity.class);
-        intent.putExtra("JOKE", jokeTeller.tellJoke());
-        startActivity(intent);
-        */
-        //Toast.makeText(this, jokeTeller.tellJoke(), Toast.LENGTH_SHORT).show();
     }
-
-
 }

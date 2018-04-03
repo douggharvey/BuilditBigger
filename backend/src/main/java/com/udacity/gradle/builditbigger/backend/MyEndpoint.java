@@ -8,6 +8,7 @@ import com.google.api.server.spi.config.ApiNamespace;
 import javax.inject.Named;
 
 /** An endpoint class we are exposing */
+@SuppressWarnings("DefaultAnnotationParam")
 @Api(
         name = "myApi",
         version = "v1",
@@ -28,11 +29,11 @@ public class MyEndpoint {
         return response;
     }
 
-    @ApiMethod(name = "getJoke")
-    public MyBean getJoke() {
+    @ApiMethod(name = "getRandomJoke")
+    public MyBean getRandomJoke() {
         MyBean response = new MyBean();
         JokeTeller jokeTeller = new JokeTeller();
-        response.setData(jokeTeller.tellJoke());
+        response.setData(jokeTeller.getRandomJoke());
         return response;
     }
 

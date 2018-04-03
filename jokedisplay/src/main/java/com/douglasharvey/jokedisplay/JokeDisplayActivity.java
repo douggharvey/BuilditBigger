@@ -14,16 +14,16 @@ public class JokeDisplayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke_display);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         String joke=null;
-        if (getIntent().hasExtra("JOKE"))
-            joke = getIntent().getStringExtra("JOKE");
+        if (getIntent().hasExtra(getString(R.string.EXTRA_JOKE)))
+            joke = getIntent().getStringExtra(getString(R.string.EXTRA_JOKE));
         TextView textView = findViewById(R.id.textView);
         textView.setText(joke);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

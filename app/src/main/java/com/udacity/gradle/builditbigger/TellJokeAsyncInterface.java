@@ -1,5 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-public interface TellJokeAsyncInterface {
+interface TellJokeAsyncInterface {
     void onResultsSucceeded(String result);
 }

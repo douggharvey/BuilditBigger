@@ -1,4 +1,7 @@
 <resources>
+
+    <string name="EXTRA_JOKE">com.udacity.gradle.EXTRA_JOKE</string>
+
     <string name="app_name">JokeDisplay</string>
     <string name="title_activity_joke_display">JokeDisplayActivity</string>
 </resources>
