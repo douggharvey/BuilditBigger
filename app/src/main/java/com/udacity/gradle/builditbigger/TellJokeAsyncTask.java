@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -42,14 +43,18 @@ class TellJokeAsyncTask extends AsyncTask<Void, Void, String> {
         }
 
         try {
+            Log.d("DOUGLAS", "doInBackground: calling return");
             return myApiService.getRandomJoke().execute().getData();
+
         } catch (IOException e) {
+            Log.d("DOUGLAS", "IO exception");
             return e.getMessage();
         }
     }
 
     @Override
     protected void onPostExecute(String result) {
+        Log.d("DOUGLAS", "ONpOSTEXEC: " +result);
         listener.onResultsSucceeded(result);
     }
 }
